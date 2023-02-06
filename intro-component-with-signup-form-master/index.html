@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        background: url(./images/bg-intro-desktop.png) hsl(0, 100%, 74%);
+      }
+      .leftSection {
+        color: white;
+      }
+      .mymt {
+        margin-top: 200px;
+      }
+      .headerText {
+        background: hsl(248, 32%, 49%);
+        padding: 15px 0px;
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        /* box-shadow: 0px 10px 7px -8px rgba(0, 0, 0, 0.34); */
+        box-shadow: 0px 7px 0px 0px rgba(208, 194, 194, 0.954);
+               
+      }
+      .myform {
+        background: white;
+        padding: 20px;
+        margin-top: 20px;
+      }
+      .form-control.error {
+        border: 2px solid hsl(0, 100%, 74%);
+      }
+      #fnamehelptext {
+        color: hsl(0, 100%, 74%);
+        text-align: right;
+        font-style: italic;
+        font-size: 12px;
+        margin-top: 5px;
+        display: none;
+      }
+      #lnamehelptext {
+        color: hsl(0, 100%, 74%);
+        text-align: right;
+        font-style: italic;
+        font-size: 12px;
+        margin-top: 5px;
+        display: none;
+      }
+      #emailhelptext {
+        color: hsl(0, 100%, 74%);
+        text-align: right;
+        font-style: italic;
+        font-size: 12px;
+        margin-top: 5px;
+        display: none;
+      }
+      #passwordhelptext {
+        color: hsl(0, 100%, 74%);
+        text-align: right;
+        font-style: italic;
+        font-size: 12px;
+        margin-top: 5px;
+        display: none;
+      }
+      .singleField {
+        position: relative;
+      }
+      .errorimg {
+        position: absolute;
+        right: 11px;
+        top: 37px;
+      }
+      .errorimg1 {
+        position: absolute;
+        right: 11px;
+        top: 37px;
+      }
+      .errorimg2 {
+        position: absolute;
+        right: 11px;
+        top: 37px;
+      }
+      .errorimg3 {
+        position: absolute;
+        right: 11px;
+        top: 37px;
+      }
+      #fnameerrorImg {
+        display: none;
+      }
+      #lnameerrorImg {
+        display: none;
+      }
+      #emailerrorImg {
+        display: none;
+      }
+      #passworderrorImg {
+        display: none;
+      }
+      .myanc{
+        color: hsl(0, 100%, 74%);
+      }
+      .btn{
+        background-color: hsl(154, 59%, 51%);
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mymt">
+      <div class="row">
+        <div class="col-md-5 offset-md-1 leftSection">
+          <h1>Learn to code by watching others</h1>
+          <p class="mt-5">
+            Learn to code by watching others See how experienced developers
+            solve problems in real-time. Watching scripted tutorials is great,
+            but understanding how developers think is invaluable.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <div class="headerText">
+            Try it free 7 days then $20/mo. thereafter
+          </div>
+          <form class="myform" id="myform">
+            <div class="mb-3 singleField">
+              <label for="exampleInputEmail1" class="form-label"
+                >First Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="fname"
+                aria-describedby="emailHelp"
+              />
+              <div class="errorimg" id="fnameerrorImg">
+                <img src="./images/icon-error.svg" alt="" />
+              </div>
+
+              <div id="fnamehelptext">First name cannot be empty</div>
+            </div>
+            <div class="mb-3 singleField">
+              <label for="exampleInputEmail1" class="form-label"
+                >Last Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="lname"
+                aria-describedby="emailHelp"
+              />
+              <div class="errorimg1" id="lnameerrorImg">
+                <img src="./images/icon-error.svg" alt="" />
+              </div>
+              <div id="lnamehelptext">Last name cannot be empty</div>
+             
+            </div>
+            <div class="mb-3 singleField">
+              <label for="exampleInputEmail1" class="form-label"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email1"
+                aria-describedby="emailHelp"
+              />
+              <div class="errorimg2" id="emailerrorImg">
+                <img src="./images/icon-error.svg" alt="" />
+              </div>
+              <div id="emailhelptext">Email cannot be empty</div>
+            </div>
+            <div class="mb-3 singleField">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="Password1"
+                aria-describedby="emailHelp"
+              />
+              <div class="errorimg3" id="passworderrorImg">
+                <img src="./images/icon-error.svg" alt="" />
+              </div>
+              <div id="passwordhelptext">password cannot be empty</div>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">
+              CLAIM YOUR FREE TRIAL
+            </button>
+            <br /><br />
+            <small>
+              By clicking the button, you are agreeing to our
+              <a href="#" class="myanc">Terms and Services</a></small
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+    <script>
+      document.getElementById("myform").onsubmit = (e) => {
+        e.preventDefault();
+        let fname = document.getElementById("fname").value;
+
+        if (fname === "") {
+          document.getElementById("fname").classList.add("error");
+          document.getElementById("fnamehelptext").style.display = "block";
+          document.getElementById("fnameerrorImg").style.display = "block";
+        } else {
+          document.getElementById("fname").classList.remove("error");
+          document.getElementById("fnamehelptext").style.display = "none";
+          document.getElementById("fnameerrorImg").style.display = "none";
+        }
+        let lname = document.getElementById("lname").value;
+        if (lname === "") {
+          document.getElementById("lname").classList.add("error");
+          document.getElementById("lnamehelptext").style.display = "block";
+          document.getElementById("lnameerrorImg").style.display = "block";
+        } else {
+          document.getElementById("lname").classList.remove("error");
+          document.getElementById("lnamehelptext").style.display = "none";
+          document.getElementById("lnameerrorImg").style.display = "none";
+        }
+        let email1 = document.getElementById("email1").value;
+        if (email1 === "") {
+          document.getElementById("email1").classList.add("error");
+          document.getElementById("emailhelptext").style.display = "block";
+          document.getElementById("emailerrorImg").style.display = "block";
+        } else {
+          document.getElementById("email1").classList.remove("error");
+          document.getElementById("emailhelptext").style.display = "none";
+          document.getElementById("emailerrorImg").style.display = "none";
+        }
+        let password1 = document.getElementById("password1").value;
+        if (password1 === "") {
+          document.getElementById("password1").classList.add("error");
+          document.getElementById("passwordhelptext").style.display = "block";
+          document.getElementById("passworderrorImg").style.display = "block";
+        } else {
+          document.getElementById("password1").classList.remove("error");
+          document.getElementById("passwordhelptext").style.display = "none";
+          document.getElementById("passworderrorImg").style.display = "none";
+        }
+      };
+      
+    </script>
+  </body>
+</html>
